@@ -1,0 +1,34 @@
+$mainColor:#F1F5FE;
+$semiBlack :#343a40;
+$semiBlue: rgb(18, 149, 209);
+$rgbaColor : rgba(18, 149, 209,0.8);
+
+
+section
+{
+    padding-top: 80px;
+    padding-bottom: 25px;
+    .container
+    {   
+        padding-top: 25px;
+        .home
+        {
+            .v-line
+            {
+                height: 45px;
+                width: 30px;
+                background-color: $semiBlue;
+            }
+            .home-caption
+            {
+                padding-left: 15px;
+                h2
+                {
+                    color: $rgbaColor;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+
+}

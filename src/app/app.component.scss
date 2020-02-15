@@ -1,0 +1,158 @@
+
+$mainColor:#F1F5FE;
+$semiBlack :#343a40;
+$semiBlue: #84DBFF;
+$rgbaColor : rgba(18, 149, 209,0.4);
+$mainBlue: rgb(18, 149, 209);
+
+.navigation
+{
+    display: none;
+    position: fixed;
+    top: 35%;
+    z-index: 50;
+    .link-content
+    {
+        position: relative;
+        left: -100%;
+        width: 150px;
+        background-color: $semiBlue;
+        height: auto;
+        z-index: 55;
+        padding: 10px 0px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        .toggler-icon
+        {
+            position: relative;
+            left: 100%;
+            cursor: pointer;
+            width: 20px;
+            transition: all 0.2s ease-in-out;
+            &:hover
+            {
+                transform: translate(25%,0);
+            }
+        }
+    
+        .nav-content
+        {
+            padding: 10px;
+            a
+            {
+                text-decoration: none;
+                span
+                {
+                    padding-left: 10px;
+                    color: $semiBlack;
+                }
+            }
+            &:hover
+            {
+                background-color: $mainColor;
+                a
+                {
+                    span
+                    {
+                        color: $semiBlack;
+                    }
+                }
+            }
+        }
+    }
+
+}
+// loading
+
+.loading-page
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:$mainBlue;
+    z-index: 99999;
+    height: 100vh;
+    .hidden-div
+    {
+        opacity: 0;
+        height: 30vh;
+    }
+    .spinner {
+        margin: 100px auto 0;
+        width: 70px;
+      
+        > div {
+          width: 18px;
+          height: 18px;
+          background-color: $mainColor;
+          border-radius: 100%;
+          display: inline-block;
+          -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+          animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        }
+      
+        .bounce1 {
+          -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+        }
+      
+        .bounce2 {
+          -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+        }
+      }
+      
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% {
+          -webkit-transform: scale(0);
+        }
+      
+        40% {
+          -webkit-transform: scale(1);
+        }
+      }
+      
+      @keyframes sk-bouncedelay {
+        0%, 80%, 100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+      
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+}
+
+// btn up
+.page-up
+{
+    position: fixed;
+    top: 90%;
+    right: 2%;
+    z-index: 100;
+    display: none;
+    img
+    {
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover
+        {
+            transform: translate(0,10%);
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width: 766px)
+{   
+    .navigation
+    {
+        display: block;
+    }
+}

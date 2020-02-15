@@ -1,0 +1,110 @@
+
+$mainColor:#F1F5FE;
+$semiBlack :#343a40;
+$semiBlue: rgb(18, 149, 209);
+$rgbaColor : rgba(18, 149, 209,0.8);
+
+
+footer
+{
+    .container
+    {   
+    padding-top: 25px;
+        .home
+        {
+            .v-line
+            {
+                height: 45px;
+                width: 30px;
+                background-color: $semiBlue;
+            }
+            .home-caption
+            {
+                padding-left: 15px;
+                h2
+                {
+                    color: $rgbaColor;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+        .follow-us
+        {
+            .v-line
+            {
+                height: 45px;
+                width: 4px;
+                background-color: $semiBlue;
+            }
+            .follow-caption
+            {
+                padding-left: 15px;
+                h2
+                {
+                    color: $rgbaColor;
+                    font-weight: bolder;
+                }
+            }
+            .social-links
+            {
+                img
+                {
+                    transition: all 0.2s ease-in-out;
+                    &:hover
+                    {
+                        transform: translate(0,8%);
+                    }
+                }
+            }
+        }
+
+        .iee-form
+        {
+            .v-line
+            {
+                height: 45px;
+                width: 4px;
+                background-color: $semiBlue;
+            }
+            .contact-caption
+            {
+                padding-left: 15px;
+                h2
+                {
+                    color: $rgbaColor;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+        form
+        {
+            button
+            {
+                padding: 10px 15px;
+                background-color: $semiBlue;
+                color: $mainColor;
+                border-radius: 20px;
+                outline: none;
+                border: 0;
+
+                &:hover
+                {
+                    background-color: $rgbaColor;
+                }
+            }
+        }
+    }
+    // copyrights
+    .copy-rights
+    {
+        background-color: $semiBlue;
+        padding: 12px 0px;
+        span
+        {
+            color:$mainColor;
+        }
+    }
+}
+

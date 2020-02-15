@@ -1,0 +1,163 @@
+$mainColor:#F1F5FE;
+$semiBlack :#343a40;
+$semiBlue: rgb(18, 149, 209);
+$rgbaColor : rgba(18, 149, 209,0.4);
+
+.side-bar-parent
+{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: $rgbaColor;
+    z-index: 500000000000000000;
+    left: -100%;
+    .side-bar-child
+    {
+        height: 100%;
+        width: 32vw;
+        z-index: 50;
+        background-color: $mainColor;
+        position: relative;
+        left: -100%;
+        overflow: scroll;
+        .close-icon
+        {
+            cursor: pointer;
+            .close
+            {
+                transition: all 0.2s ease-in-out;
+                &:hover
+                {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        .contact-us
+        {
+            h2
+            {
+                color: $semiBlack;
+                font-weight: bolder;
+                margin-bottom: 20px;
+            }
+        }
+        .tel
+        {
+            a
+            {
+                color: $semiBlack;
+                text-decoration: none;
+            }
+        }
+        .mail
+        {
+            a
+            {
+                text-decoration: none;
+                color: $semiBlack;
+            }
+        }
+        .follow-us
+        {
+            h2
+            {
+                margin-bottom: 0;
+                color: $semiBlack;
+                font-weight: bolder;
+                margin-bottom: 20px;
+            }
+        }
+        .social-media
+        {
+            img
+            {
+                transition: all 0.2s ease-in-out;
+                &:hover
+                {
+                    transform: translate(0,8%);
+                }
+            }
+        }
+        .about-us
+        {
+            h2
+            {
+                margin-bottom: 0;
+                color: $semiBlack;
+                font-weight: bolder;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.navbar
+{
+    background-color: $mainColor;
+    padding: 0rem 0rem;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    .navbar-nav
+    {
+        .nav-item
+        {
+            padding: 20px;
+            .nav-link
+            {
+                color: $semiBlack;
+            }
+
+            &:hover
+            {
+                background-color: $semiBlue;
+                .nav-link
+                {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .three-lines
+    {
+        cursor: pointer;
+        padding-right: 20px;
+        div
+        {
+            width: 35px;
+            height: 3px;
+            background-color: black;
+            margin: 6px 0;
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 900px)
+{
+    .side-bar-parent
+    {
+        .side-bar-child
+        {
+            width: 50vw;
+        }
+    }
+    .navbar-brand
+    {
+        padding-left: 20px;
+    }
+}
+@media only screen and (max-width: 600px)
+{
+    .side-bar-parent
+    {
+        .side-bar-child
+        {
+            width: 325px;
+        }
+    }
+
+    .three-lines
+    {
+        padding-right: 15px;
+    }
+}
